@@ -43,3 +43,12 @@ ADD COLUMN theatre_id INTEGER;
 
 ALTER TABLE ticket 
 ADD FOREIGN KEY (theatre_id) REFERENCES theatre(theatre_id);
+
+ALTER TABLE ticket
+ADD COLUMN movie_id INTEGER;
+
+ALTER TABLE ticket  
+ADD FOREIGN KEY (movie_id) REFERENCES movie(movie_id);
+
+SELECT *
+FROM ticket
